@@ -1,0 +1,17 @@
+@font-face {
+    font-family:PressStart2P;
+    src: url(./Fonts/PressStart2P-Regular.ttf);
+ }
+
+/*Header Do projeto */
+body{
+    background-image:url(./Imagens/bakcground.jpg);
+}
+
+h1{
+    font-family:PressStart2P;
+    color: white;
+    font-size: 1.3rem;
+    width: 50%;
+
+} 
