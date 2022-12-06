@@ -8,10 +8,122 @@ body{
     background-image:url(./Imagens/bakcground.jpg);
 }
 
-h1{
+#Animacoes{
+    display:flex;
+    justify-content: space-around;
+}
+
+#Animacoes h1{
     font-family:PressStart2P;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1rem;
     width: 50%;
+    margin-top: 100px;
+    border-right: 2PX rgb(238, 238, 245) solid;
+    padding-right: 100px;
+    height: 150px;
+    width:50%;
 
 } 
+/*Flutuação da imagen*/
+.disco-Voador{
+    width: 200px;
+    animation: float 3s ease-in-out infinite;
+    margin-top:10px;
+    
+}
+@keyframes float {
+    0%, 100%{
+        transform: translateY(50px);
+    }
+    50%{
+        transform: translateX(-50px);
+    }
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    width:50%;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  .seção{
+    margin-top : 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+
+/*Dispositivos com o maáximo de 467px*/
+
+@media only screen and (max-width: 467px) {
+    /*Animação float + TypeWrither*/
+
+    h1{
+        font-size: 0.7rem;
+        padding-right:1px;
+        height:120px;
+        margin-top: 50px;
+    }
+    .disco-Voador{
+        width: 100px;
+        margin-top: 65px;
+        height:70px;
+        margin-right: 30px;
+    }
+    @keyframes float {
+        0%, 100%{
+            transform: translateY(10px);
+        }
+        50%{
+            transform: translateX(-25px);
+        }
+    }
+  }
+
+/*Dispositivos com no minimo 468px  e  no máximo 768px*/
+@media only screen and (max-width: 768px) {
+    /*Animação float + TypeWrither*/
+
+    h1{
+        font-size: 0.7rem;
+        padding-right:1px;
+        height:150px;margin-top: 50px;
+    }
+    .disco-Voador{
+        width: 100px;
+        margin-top: 65px;
+        height:70px;
+        margin-right: 60px;
+    }
+    @keyframes float {
+        0%, 100%{
+            transform: translateY(10px);
+        }
+        50%{
+            transform: translateX(-25px);
+        }
+    }
+  }
+  
