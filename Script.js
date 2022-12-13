@@ -1,5 +1,5 @@
 const titulo = document.querySelector('#Text'); //Seleciona o Elemento do html 
-const texto = "Me chamo Matheus Cavalcanti, sou Desenvolverdor Full-Stack, esse é meu portifólio..."; //Texto A Ser digitado Letra pro letra
+const texto = "Me chamo Matheus Cavalcanti. sou Desenvolverdor Full-Stack e esse é meu portifólio..."; //Texto A Ser digitado Letra pro letra
 const interval = 40; //Intervalo de digitação da letra
 //Váriaveis necessárias 
 
@@ -16,7 +16,6 @@ function ShowText(titulo, texto, interval){
         const next = Char.pop();  /// Método pop remove o ultimo elemento do array
         titulo.innerHTML += next; // No Titulo, o documento selecionado, joga a letra na tela
     }, interval); //setInterva chama Interval por último
-
 
 }
 

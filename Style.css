@@ -11,18 +11,19 @@ body{
 #Animacoes{
     display:flex;
     justify-content: space-around;
+    
 }
 
 #Animacoes h1{
+   text-align:justify ;
     font-family:PressStart2P;
     color: white;
     font-size: 1rem;
-    width: 50%;
+    width: 55%;
     margin-top: 100px;
     border-right: 2PX rgb(238, 238, 245) solid;
     padding-right: 100px;
     height: 160px;
-    width:50%;
 
 } 
 /*Flutuação da imagen*/
@@ -110,6 +111,7 @@ body{
     font-size:0.7rem;
     padding-top: 5px;
     padding-left: 5px;
+    text-align: justify;
   }
 
 
@@ -119,6 +121,7 @@ body{
     /*Animação float + TypeWrither*/
 
     #Animacoes h1{
+       text-align: justify;
         font-size: 0.7rem;
         margin-right: 25px;
         height:135px;
