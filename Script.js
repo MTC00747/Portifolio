@@ -25,20 +25,19 @@ ShowText(titulo, texto, interval); //Chama a função com esses parametros;
 
 /*acordeão */
 
-var acc = document.getElementsByClassName("accordion");
-var i;
+const accordionTitles = document.querySelectorAll(".accordionTitle"); // Seleciona todos elementos da classe 
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
-
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
+accordionTitles.forEach((accordionTitle) => { //Para cada elemento da classe acordeon title
+  accordionTitle.addEventListener("click", () => { //Adicionando um evento de click
+    if (accordionTitle.classList.contains("is-open")) { // Se na classe "accordionTitle" COnter "is-open" /**Primeiro Bloco */
+      accordionTitle.classList.remove("is-open"); // Remove "is-opem"
+    } else { //Se não tiver is-open
+      const accordionTitlesWithIsOpen = document.querySelectorAll(".is-open");
+      accordionTitlesWithIsOpen.forEach((accordionTitleWithIsOpen) => {
+        accordionTitleWithIsOpen.classList.remove("is-open"); //Faz parte do bloco else, Se for elSe Ele vai usar a estruta de cima para remover e usar essa para adicionar a classe.
+      });
+      accordionTitle.classList.add("is-open");
     }
-  })}
+  });
+});
+
