@@ -21,7 +21,7 @@ body{
     margin-top: 100px;
     border-right: 2PX rgb(238, 238, 245) solid;
     padding-right: 100px;
-    height: 150px;
+    height: 160px;
     width:50%;
 
 } 
@@ -29,7 +29,7 @@ body{
 .disco-Voador{
     width: 200px;
     animation: float 3s ease-in-out infinite;
-    margin-top:10px;
+    margin-top:5px;
     
 }
 @keyframes float {
@@ -40,39 +40,77 @@ body{
         transform: translateX(-50px);
     }
 }
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 50%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-  }
-  
-  .active, .accordion:hover {
-    background-color: #ccc; 
-  }
-  
-  .panel {
-    padding: 0 18px;
-    display: none;
-    width:50%;
-    background-color: white;
-    overflow: hidden;
-  }
-
-  .seção{
-    margin-top : 80px;
-    display: flex;
+/*Acordeon*/
+.container{
+    margin-top: 80px;
+    display:flex;
     flex-direction: column;
     align-items: center;
   }
 
+   .accordionItem{
+    color: white;
+    background-color: rgb(100, 97, 97);
+    width: 50%;
+    box-shadow: 10px;
+    border-radius: 10px;
+    margin-top: 10px; 
+}
+.accordionTitle {
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-left: 12px;
+    padding:5px;
+  
+  }
+  .accordionItem h2{
+    font-size: 1.5rem;
+  }
+  
+  .accordionTitle + .accordionContent {
+    display: none; 
+  }
+  .accordionTitle.is-open + .accordionContent {
+     display: block;
+   -webkit-animation: transition 1.3s linear;
+    -moz-animation: transition 1.3s linear;
+  }
+  @-webkit-keyframes transition {
+    0% {
+       opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes transition {
+    0% {
+      opacity:0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+  .accordionContent {
+    background-color: rgb(18, 18, 20);
+    height: 100px;
+    
+   
+  }
+  
+  .accordionContent p{
+    color:white;
+    font-family: PressStart2P, sans-serif;
+    font-size:0.7rem;
+    padding-top: 5px;
+    padding-left: 5px;
+  }
 
 
 /*Dispositivos com o maáximo de 467px*/
@@ -80,11 +118,12 @@ body{
 @media only screen and (max-width: 467px) {
     /*Animação float + TypeWrither*/
 
-    h1{
+    #Animacoes h1{
         font-size: 0.7rem;
-        padding-right:1px;
-        height:120px;
+        margin-right: 25px;
+        height:135px;
         margin-top: 50px;
+       
     }
     .disco-Voador{
         width: 100px;
@@ -100,6 +139,19 @@ body{
             transform: translateX(-25px);
         }
     }
+
+    /*ACORDEON*/
+
+    .accordionItem{
+        width: 70%;
+    }
+    .accordionItem h2{
+        font-size: 1.3rem;
+    }
+     .accordionContent {
+        background-color: rgb(18, 18, 20);
+        height: 250px;
+     }
   }
 
 /*Dispositivos com no minimo 468px  e  no máximo 768px*/
@@ -109,7 +161,8 @@ body{
     h1{
         font-size: 0.7rem;
         padding-right:1px;
-        height:150px;margin-top: 50px;
+        height:150px;
+        margin-top: 50px;
     }
     .disco-Voador{
         width: 100px;
